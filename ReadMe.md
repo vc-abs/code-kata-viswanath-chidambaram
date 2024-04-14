@@ -14,19 +14,27 @@
 
 * Quite a few items in the solution could be implemented better, but time was a constraint.
 
+# Production
+```sh
+$ # From Project Root:
+
+$ # Build the docker image.
+$ docker build -t ck-vc .
+
+$ # Run the built image.
+$ docker run ck-vc
+```
+
 # Development
-
-## Setup
 ```sh
-$ sh ./setup.sh
-```
+$ # From Project Root:
 
-## Execution
-```sh
-$ npm start
-```
+$ # Setup the repo for development.
+$ bash ./setup.sh
 
-## Testing
-```sh
+$ # Test the project.
 $ npm run test
+
+$ # Run the project.
+$ npm start
 ```
