@@ -1,20 +1,19 @@
 import axios from 'axios';
 
 const getDataFetcher = (config) => {
-	const state = {
+	const configCache = {
 		...config,
-		nextID: config.startingID,
 	};
 
 	const getTodo = async (id) => {
-		const { data } = await axios.get(`${config.baseURL}${id}`);
+		const { data } = await axios.get(`${configCache.baseURL}${id}`);
 
 		return data;
 	};
 
 	const fetchData = () => {
-		const calls = Array.from({ length: 2 })
-			.map((_, i) => getTodo((i * state.step) + state.startingID));
+		const calls = Array.from({ length: config.documentCount })
+			.map((_, i) => getTodo((i * configCache.step) + configCache.startingID));
 
 		return Promise.all(calls);
 	};

@@ -11,12 +11,9 @@ describe('dataFetcher', () => {
 	// eslint-disable-next-line max-len
 	test('The function returned from dataFetcher calls the API appropriately and returns the response as an array of objects.', async () => {
 		const fetchData = getDataFetcher(config);
-		const callCount = (
-			(config.endingID - config.startingID) / config.step
-		) + 1;
 
 		const data = await fetchData();
 
-		expect(data.length).toEqual(callCount);
+		expect(data.length).toEqual(config.documentCount);
 	});
 });
