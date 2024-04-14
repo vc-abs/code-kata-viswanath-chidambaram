@@ -1,9 +1,3 @@
-import { peek } from '@laufire/utils/debug';
+import { main } from './dataFetcher';
 
-const main = () => {
-	peek('Working');
-};
-
-export {
-	main,
-};
+main();

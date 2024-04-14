@@ -1,4 +1,4 @@
-import { main } from '.';
+import { main } from './dataFetcher';
 
 describe('the package', () => {
 	test('the main entry point', () => {

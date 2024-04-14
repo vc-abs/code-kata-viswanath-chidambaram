@@ -45,7 +45,8 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "./src/**/*.js"
+      "./src/**/*.js",
+      "!./src/index.js"
     ],
     "coverageDirectory": "./.coverage",
     "coverageThreshold": {
@@ -63,7 +64,8 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/dist/"
+      "/dist/",
+      "!./src/index.js"
     ],
     "transform": {
       "^.+\\.js?$": "babel-jest"
