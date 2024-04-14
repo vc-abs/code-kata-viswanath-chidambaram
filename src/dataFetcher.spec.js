@@ -15,5 +15,10 @@ describe('dataFetcher', () => {
 		const data = await fetchData();
 
 		expect(data.length).toEqual(config.documentCount);
+
+		data.map((mockResponse, i) => {
+			expect(mockResponse)
+				.toEqual(`${config.baseURL}${(i * config.step) + config.startingID}`);
+		});
 	});
 });
