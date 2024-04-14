@@ -1,9 +1,5 @@
-import { peek } from '@laufire/utils/debug';
-
-const main = () => {
-	peek('Working');
-};
+const getDataFetcher = (config) => () => [config];
 
 export {
-	main,
+	getDataFetcher,
 };
