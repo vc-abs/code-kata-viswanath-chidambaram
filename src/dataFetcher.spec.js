@@ -18,7 +18,7 @@ describe('dataFetcher', () => {
 
 		data.map((mockResponse, i) => {
 			expect(mockResponse)
-				.toEqual(`${config.baseURL}${(i * config.step) + config.startingID}`);
+				.toEqual(`${ config.baseURL }${ (i * config.step) + config.startingID }`);
 		});
 	});
 });
