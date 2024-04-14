@@ -1,44 +1,30 @@
-# Project Name
+# Code Kata - Viswanath Chidamabaram
 
-	Project description.
-
-## The `Why`
-
-* The need for the project.
-
-## Example
-```js
-/* Example Description. */
-example();
-```
-**For more examples, check the [examples](https://github.com/author-name/project-name/tree/master/examples) dir**.
-```sh
-# Or run the following (with node v8+):
-$ node ./examples/cheatsheet.js
-```
-
-## Installation
-```sh
-$ npm install package-name
-```
-
-## Use Cases
-
-* Some usecases.
-
-## Keys
-
-* A short list of things to understand the package, better.
+	A solution for L1 coding challenge provided by a client.
 
 ## Notes
 
-* Some notes.
+* Client name is not mentioned in the repo to avoid the solution be used by future candidates (the repo will be hosted in github for sometime).
+
+* Though the given problem could be solved by directly getting all todos by calling **/todos**. But this means todos beyond 200 can't be retrieved, as the response doesn't have any HTTP pagination headers.
+
+* Hence **/todos/{id}** is called repeatedly till the given number of todos are retrieved.
 
 # Development
 
 ## Setup
 ```sh
 $ sh ./setup.sh
+```
+
+## Execution
+```sh
+$ npm start
+```
+
+## Testing
+```sh
+$ npm run test
 ```
 
 ## ToDo
