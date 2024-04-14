@@ -1,10 +1,10 @@
 import config from './config';
 import { getDataFetcher } from './dataFetcher';
 
-const main = () => {
+const main = async () => {
 	const fetchData = getDataFetcher(config);
 
-	const data = fetchData();
+	const data = await fetchData();
 
 	// eslint-disable-next-line no-console
 	console.table(data);

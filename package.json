@@ -69,6 +69,9 @@
     ],
     "transform": {
       "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^axios$": "axios/dist/node/axios.cjs"
     }
   },
   "directories": {
@@ -77,6 +80,7 @@
   },
   "dependencies": {
     "@laufire/utils": "3.0.0-0",
+    "axios": "^1.6.8",
     "pino": "^5.17.0"
   }
 }
