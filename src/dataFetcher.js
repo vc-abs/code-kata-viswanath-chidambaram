@@ -6,12 +6,17 @@ const getDataFetcher = (config) => {
 		nextID: config.startingID,
 	};
 
-	const fetchData = async () => {
-		const response = await axios.get(`${state.baseURL}${state.nextID}`);
+	const getTodo = async (id) => {
+		const { data } = await axios.get(`${config.baseURL}${id}`);
 
-		state.nextID += state.step;
+		return data;
+	};
 
-		return [response.data];
+	const fetchData = () => {
+		const calls = Array.from({ length: 2 })
+			.map((_, i) => getTodo((i * state.step) + state.startingID));
+
+		return Promise.all(calls);
 	};
 
 	return fetchData;
